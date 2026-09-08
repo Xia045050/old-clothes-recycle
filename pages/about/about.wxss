@@ -1,0 +1,81 @@
+.brand {
+  text-align: center;
+  padding: 60rpx 0 40rpx;
+}
+.logo {
+  width: 140rpx;
+  height: 140rpx;
+  line-height: 140rpx;
+  margin: 0 auto;
+  border-radius: 40rpx;
+  background: linear-gradient(135deg, #00c983, #00b578);
+  font-size: 72rpx;
+  box-shadow: 0 12rpx 32rpx rgba(0, 181, 120, 0.3);
+}
+.b-name {
+  margin-top: 24rpx;
+  font-size: 40rpx;
+  font-weight: 700;
+}
+.b-slogan {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #86909c;
+}
+
+.para {
+  font-size: 26rpx;
+  color: #4e5969;
+  line-height: 1.8;
+}
+
+.w-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 18rpx 0;
+}
+.w-ico {
+  font-size: 44rpx;
+  margin-right: 20rpx;
+}
+.w-body {
+  flex: 1;
+}
+.w-name {
+  font-size: 28rpx;
+  font-weight: 600;
+}
+.w-desc {
+  margin-top: 6rpx;
+  font-size: 24rpx;
+  color: #86909c;
+  line-height: 1.6;
+}
+
+.faq .q {
+  font-size: 26rpx;
+  font-weight: 600;
+  margin-top: 16rpx;
+}
+.faq .a {
+  font-size: 24rpx;
+  color: #86909c;
+  margin-top: 8rpx;
+  line-height: 1.7;
+}
+
+.contact {
+  padding: 24rpx 32rpx;
+}
+.c-row {
+  font-size: 26rpx;
+  color: #4e5969;
+  line-height: 2;
+}
+
+.foot {
+  text-align: center;
+  font-size: 22rpx;
+  color: #c9cdd4;
+  padding: 20rpx 0 60rpx;
+}

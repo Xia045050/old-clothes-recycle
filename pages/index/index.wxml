@@ -1,0 +1,102 @@
+<view class="page">
+  <!-- 顶部宣传区 -->
+  <view class="hero">
+    <view class="hero-badge">♻️ 绿色公益 · 循环利用</view>
+    <view class="hero-title">让每一件旧衣</view>
+    <view class="hero-title">都有好归宿</view>
+    <view class="hero-sub">免费上门回收 · 足不出户做环保</view>
+    <view class="hero-cta" bindtap="goBooking">立即免费预约 ›</view>
+
+    <view class="hero-stats">
+      <view class="hstat">
+        <view class="num">126万+</view>
+        <view class="lbl">累计回收(kg)</view>
+      </view>
+      <view class="hstat-line"></view>
+      <view class="hstat">
+        <view class="num">456吨</view>
+        <view class="lbl">减少碳排放</view>
+      </view>
+      <view class="hstat-line"></view>
+      <view class="hstat">
+        <view class="num">3.2万</view>
+        <view class="lbl">公益捐赠(件)</view>
+      </view>
+    </view>
+    <view class="hero-circle c1"></view>
+    <view class="hero-circle c2"></view>
+  </view>
+
+  <!-- 快捷入口 -->
+  <view class="card quick">
+    <view class="q-item" bindtap="goBooking">
+      <view class="q-ico">🚚</view>
+      <view class="q-txt">预约上门</view>
+    </view>
+    <view class="q-item" bindtap="goPoints">
+      <view class="q-ico">🌱</view>
+      <view class="q-txt">环保积分</view>
+    </view>
+    <view class="q-item" bindtap="goNearby">
+      <view class="q-ico">📍</view>
+      <view class="q-txt">附近网点</view>
+    </view>
+    <view class="q-item" bindtap="goAbout">
+      <view class="q-ico">📖</view>
+      <view class="q-txt">回收流程</view>
+    </view>
+  </view>
+
+  <!-- 轮播 -->
+  <swiper class="banner" autoplay circular interval="4000" indicator-dots
+    indicator-active-color="#ffffff" indicator-color="rgba(255,255,255,0.4)">
+    <swiper-item wx:for="{{banners}}" wx:key="id">
+      <view class="banner-slide {{item.cls}}">
+        <view class="b-t">{{item.title}}</view>
+        <view class="b-s">{{item.sub}}</view>
+        <view class="b-deco d1"></view>
+        <view class="b-deco d2"></view>
+      </view>
+    </swiper-item>
+  </swiper>
+
+  <!-- 回收品类 -->
+  <view class="card">
+    <view class="card-title">支持回收的品类</view>
+    <view class="cat-grid">
+      <view class="cat" wx:for="{{categories}}" wx:key="id" bindtap="goBooking">
+        <view class="cat-ico">{{item.icon}}</view>
+        <view class="cat-name">{{item.name}}</view>
+        <view class="cat-desc">{{item.desc}}</view>
+      </view>
+    </view>
+    <view class="cat-note">📌 物品请保持干净干燥，满 5 公斤即可免费上门回收</view>
+  </view>
+
+  <!-- 回收流程 -->
+  <view class="card">
+    <view class="card-title">回收流程</view>
+    <view class="steps">
+      <view class="step" wx:for="{{steps}}" wx:key="name">
+        <view class="step-num">{{index + 1}}</view>
+        <view class="step-name">{{item.name}}</view>
+        <view class="step-desc">{{item.desc}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 服务承诺 -->
+  <view class="card promise">
+    <view class="p-item" wx:for="{{promises}}" wx:key="txt">
+      <view class="p-ico">{{item.icon}}</view>
+      <view class="p-txt">{{item.txt}}</view>
+    </view>
+  </view>
+
+  <view class="foot-space"></view>
+
+  <!-- 底部预约入口 -->
+  <view class="bottom-bar">
+    <view class="btn-primary" bindtap="goBooking">免费预约上门回收</view>
+  </view>
+</view>

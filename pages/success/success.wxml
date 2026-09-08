@@ -1,0 +1,31 @@
+<view class="page">
+  <view class="result">
+    <view class="check">✓</view>
+    <view class="r-title">预约提交成功</view>
+    <view class="r-sub">回收员将按时上门，请保持电话畅通</view>
+  </view>
+
+  <view class="card" wx:if="{{order}}">
+    <view class="o-row">
+      <text class="o-label">预约单号</text>
+      <text class="o-val">{{order.id}}</text>
+    </view>
+    <view class="o-row">
+      <text class="o-label">上门时间</text>
+      <text class="o-val">{{order.dateLabel}} {{order.slot}}</text>
+    </view>
+    <view class="o-row">
+      <text class="o-label">取件地址</text>
+      <text class="o-val">{{order.address.full}}</text>
+    </view>
+    <view class="o-row">
+      <text class="o-label">预计积分</text>
+      <text class="o-val point">+{{order.points}} 积分</text>
+    </view>
+  </view>
+
+  <view class="btns">
+    <view class="btn-plain" bindtap="goIndex">返回首页</view>
+    <view class="btn-primary btn-half" bindtap="goOrders">查看我的预约</view>
+  </view>
+</view>

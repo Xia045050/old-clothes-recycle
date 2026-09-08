@@ -1,0 +1,24 @@
+.f-row {
+  display: flex;
+  align-items: center;
+  padding: 8rpx 0;
+}
+.f-label {
+  width: 180rpx;
+  font-size: 28rpx;
+  color: #4e5969;
+  flex-shrink: 0;
+}
+.f-input {
+  flex: 1;
+  font-size: 28rpx;
+}
+.f-picker {
+  font-size: 28rpx;
+}
+.ph {
+  color: #c9cdd4;
+}
+.save-area {
+  margin: 48rpx 32rpx;
+}

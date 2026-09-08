@@ -1,0 +1,57 @@
+<view class="page">
+  <!-- 用户卡片 -->
+  <view class="u-hero">
+    <view class="u-left">
+      <view class="avatar">🌱</view>
+      <view class="u-info">
+        <view class="u-name" wx:if="{{user}}">{{user.nickname}}</view>
+        <view class="u-name" wx:else>未登录</view>
+        <view class="u-sub" wx:if="{{user}}">感谢您为环保做出的贡献</view>
+        <view class="u-sub" wx:else>登录后同步您的环保记录</view>
+      </view>
+    </view>
+    <view class="login-btn" wx:if="{{!user}}" bindtap="login">点击登录</view>
+  </view>
+
+  <!-- 数据统计 -->
+  <view class="card stats">
+    <view class="s-item" bindtap="goPoints">
+      <view class="s-num">{{stats.points}}</view>
+      <view class="s-lbl">环保积分</view>
+    </view>
+    <view class="s-line"></view>
+    <view class="s-item" bindtap="goOrders">
+      <view class="s-num">{{stats.orderCount}}</view>
+      <view class="s-lbl">全部预约</view>
+    </view>
+    <view class="s-line"></view>
+    <view class="s-item" bindtap="goPoints">
+      <view class="s-num">{{stats.co2}}<text class="s-unit">kg</text></view>
+      <view class="s-lbl">减碳量</view>
+    </view>
+  </view>
+
+  <!-- 菜单 -->
+  <view class="card menu">
+    <view class="m-item" bindtap="goOrders">
+      <text class="m-ico">📋</text><text class="m-txt">我的预约订单</text><text class="m-arrow">›</text>
+    </view>
+    <view class="m-item" bindtap="goAddress">
+      <text class="m-ico">🏠</text><text class="m-txt">地址管理</text><text class="m-arrow">›</text>
+    </view>
+    <view class="m-item" bindtap="goPoints">
+      <text class="m-ico">🌱</text><text class="m-txt">环保积分</text><text class="m-arrow">›</text>
+    </view>
+    <view class="m-item" bindtap="goNearby">
+      <text class="m-ico">📍</text><text class="m-txt">附近回收点</text><text class="m-arrow">›</text>
+    </view>
+    <view class="m-item" bindtap="callService">
+      <text class="m-ico">📞</text><text class="m-txt">联系客服</text><text class="m-sub-tel">400-800-1234</text><text class="m-arrow">›</text>
+    </view>
+    <view class="m-item" bindtap="goAbout">
+      <text class="m-ico">💚</text><text class="m-txt">关于我们</text><text class="m-arrow">›</text>
+    </view>
+  </view>
+
+  <view class="reset" bindtap="clearCache">重置演示数据</view>
+</view>

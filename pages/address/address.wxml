@@ -1,0 +1,32 @@
+<view class="page">
+  <block wx:if="{{list.length > 0}}">
+    <view class="card a-card {{mode === 'select' ? 'selectable' : ''}}" wx:for="{{list}}" wx:key="id"
+      data-id="{{item.id}}" bindtap="pick">
+      <view class="row-space">
+        <view class="a-name">{{item.name}} <text class="a-phone">{{item.phone}}</text></view>
+        <view class="tag" wx:if="{{item.isDefault}}">默认</view>
+      </view>
+      <view class="a-full">{{item.full}}</view>
+      <view class="divider"></view>
+      <view class="row-space">
+        <view class="a-actions">
+          <view class="a-act" wx:if="{{!item.isDefault}}" data-id="{{item.id}}" catchtap="setDefault">设为默认</view>
+          <view class="a-act" data-id="{{item.id}}" catchtap="edit">编辑</view>
+          <view class="a-act danger" data-id="{{item.id}}" catchtap="remove">删除</view>
+        </view>
+        <view class="a-pick" wx:if="{{mode === 'select'}}">选这个 ›</view>
+      </view>
+    </view>
+  </block>
+
+  <view class="empty" wx:else>
+    <text class="empty-emoji">🏠</text>
+    <view>还没有地址，先添加一个吧</view>
+  </view>
+
+  <view class="foot-space"></view>
+
+  <view class="bottom-bar">
+    <view class="btn-primary" bindtap="add">＋ 新增地址</view>
+  </view>
+</view>

@@ -1,0 +1,46 @@
+.map {
+  width: 100%;
+  height: 45vh;
+}
+.tip {
+  font-size: 22rpx;
+  color: #86909c;
+  text-align: center;
+  padding: 20rpx 0 4rpx;
+}
+.n-card {
+  padding: 28rpx 32rpx;
+}
+.n-name {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.n-dist {
+  font-size: 24rpx;
+  color: #00b578;
+  font-weight: 600;
+}
+.n-addr {
+  margin-top: 10rpx;
+  font-size: 24rpx;
+  color: #4e5969;
+}
+.n-time {
+  margin-top: 6rpx;
+  font-size: 24rpx;
+  color: #86909c;
+}
+.n-btn {
+  font-size: 26rpx;
+  border-radius: 32rpx;
+  padding: 12rpx 36rpx;
+}
+.n-btn.call {
+  border: 2rpx solid #e5e6eb;
+  color: #4e5969;
+}
+.n-btn.go {
+  background: #e8fff4;
+  color: #00b578;
+  font-weight: 500;
+}

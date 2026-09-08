@@ -1,0 +1,149 @@
+.page {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.title-tip {
+  font-size: 24rpx;
+  color: #86909c;
+  font-weight: 400;
+}
+
+/* 地址卡片 */
+.addr {
+  padding: 32rpx;
+}
+.addr-line1 {
+  display: flex;
+  align-items: center;
+}
+.addr-name {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.addr-phone {
+  margin-left: 16rpx;
+  font-size: 26rpx;
+  color: #86909c;
+}
+.addr-full {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #4e5969;
+  line-height: 1.5;
+}
+.addr-change {
+  font-size: 24rpx;
+  color: #00b578;
+  margin-left: 20rpx;
+}
+.addr-empty {
+  text-align: center;
+  color: #00b578;
+  font-size: 28rpx;
+  padding: 16rpx 0;
+  font-weight: 500;
+}
+
+/* 胶囊容器 */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+}
+.weight-tip {
+  font-size: 22rpx;
+  color: #86909c;
+  margin-top: 8rpx;
+}
+
+/* 日期横滚 */
+.date-scroll {
+  white-space: nowrap;
+  margin-bottom: 24rpx;
+}
+.date-item {
+  display: inline-block;
+  width: 150rpx;
+  padding: 18rpx 0;
+  text-align: center;
+  border-radius: 16rpx;
+  background: #f7f8fa;
+  margin-right: 16rpx;
+  border: 2rpx solid transparent;
+  box-sizing: border-box;
+}
+.date-item .d-label {
+  font-size: 26rpx;
+  font-weight: 500;
+}
+.date-item .d-week {
+  margin-top: 6rpx;
+  font-size: 22rpx;
+  color: #86909c;
+}
+.date-item.active {
+  background: #e8fff4;
+  border-color: #00b578;
+}
+.date-item.active .d-week {
+  color: #00b578;
+}
+
+/* 备注 */
+.remark {
+  width: 100%;
+  height: 150rpx;
+  background: #f7f8fa;
+  border-radius: 16rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+}
+.ph {
+  color: #c9cdd4;
+}
+
+/* 说明 */
+.rules {
+  margin: 32rpx 40rpx;
+  padding: 24rpx;
+  background: #f7f8fa;
+  border-radius: 16rpx;
+}
+.rule-t {
+  font-size: 26rpx;
+  font-weight: 600;
+  margin-bottom: 12rpx;
+}
+.rule {
+  font-size: 24rpx;
+  color: #86909c;
+  line-height: 1.8;
+}
+
+/* 底部 */
+.foot-space {
+  height: 170rpx;
+}
+.bottom-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 32rpx calc(20rpx + env(safe-area-inset-bottom));
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 -4rpx 20rpx rgba(29, 33, 41, 0.06);
+  z-index: 10;
+}
+.bar-points {
+  margin-right: 24rpx;
+  font-size: 24rpx;
+  color: #86909c;
+}
+.bar-points .num {
+  color: #ff7d00;
+  font-size: 34rpx;
+  font-weight: 700;
+  margin: 0 4rpx;
+}

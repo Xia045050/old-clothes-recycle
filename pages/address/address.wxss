@@ -1,0 +1,50 @@
+.a-card.selectable {
+  position: relative;
+}
+.a-name {
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.a-phone {
+  font-size: 26rpx;
+  color: #86909c;
+  font-weight: 400;
+  margin-left: 12rpx;
+}
+.a-full {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #4e5969;
+  line-height: 1.5;
+}
+.a-actions {
+  display: flex;
+}
+.a-act {
+  font-size: 24rpx;
+  color: #4e5969;
+  margin-right: 36rpx;
+  padding: 4rpx 0;
+}
+.a-act.danger {
+  color: #f53f3f;
+}
+.a-pick {
+  font-size: 24rpx;
+  color: #00b578;
+  font-weight: 500;
+}
+
+.foot-space {
+  height: 170rpx;
+}
+.bottom-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20rpx 32rpx calc(20rpx + env(safe-area-inset-bottom));
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 -4rpx 20rpx rgba(29, 33, 41, 0.06);
+  z-index: 10;
+}

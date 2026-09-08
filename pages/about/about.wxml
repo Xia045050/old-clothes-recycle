@@ -1,0 +1,64 @@
+<view class="page">
+  <!-- 品牌 -->
+  <view class="brand">
+    <view class="logo">♻️</view>
+    <view class="b-name">旧衣回收</view>
+    <view class="b-slogan">让每一件旧衣都有好归宿</view>
+  </view>
+
+  <!-- 介绍 -->
+  <view class="card">
+    <view class="card-title">我们是谁</view>
+    <view class="para">「旧衣回收」是一个面向家庭用户的环保回收平台。我们提供免费上门回收服务，将您闲置的旧衣服、鞋靴、箱包、床品、玩具、书籍等统一回收，经过分拣后进入环保再生与公益捐赠渠道，让闲置资源循环利用，减少填埋与焚烧带来的污染。</view>
+  </view>
+
+  <!-- 我们做什么 -->
+  <view class="card">
+    <view class="card-title">旧衣去哪儿了</view>
+    <view class="w-item">
+      <view class="w-ico">💚</view>
+      <view class="w-body">
+        <view class="w-name">公益捐赠</view>
+        <view class="w-desc">成色较好的衣物经清洗消毒后，捐赠给山区学校与公益组织</view>
+      </view>
+    </view>
+    <view class="w-item">
+      <view class="w-ico">🏭</view>
+      <view class="w-body">
+        <view class="w-name">环保再生</view>
+        <view class="w-desc">无法再穿的衣物被加工成再生纤维、大棚保温毡、汽车隔音棉等工业原料</view>
+      </view>
+    </view>
+    <view class="w-item">
+      <view class="w-ico">🌍</view>
+      <view class="w-body">
+        <view class="w-name">循环利用</view>
+        <view class="w-desc">每回收 1 公斤旧衣，约可减少 3.6 公斤碳排放、节约 6000 升水</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 常见问题 -->
+  <view class="card">
+    <view class="card-title">常见问题</view>
+    <view class="faq">
+      <view class="q">Q：回收真的免费吗？</view>
+      <view class="a">A：是的，满 5 公斤即可免费预约上门，全程不收取任何费用。</view>
+      <view class="q">Q：衣服需要怎么处理？</view>
+      <view class="a">A：干净、干燥即可，建议打包装袋，无需分类整理，回收员上门称重。</view>
+      <view class="q">Q：什么衣物不回收？</view>
+      <view class="a">A：潮湿发霉、油污严重、破洞无法再利用的衣物暂不回收。</view>
+      <view class="q">Q：积分怎么获得和使用？</view>
+      <view class="a">A：回收完成后按 1 公斤 = 5 积分发放，可在「环保积分」页兑换礼品。</view>
+    </view>
+  </view>
+
+  <!-- 联系方式 -->
+  <view class="card contact" bindtap="callService">
+    <view class="c-row">📞 客服热线：400-800-1234（点击拨打）</view>
+    <view class="c-row">📧 邮箱：service@jiuyi-recycle.cn</view>
+    <view class="c-row">🕐 服务时间：每天 9:00 - 21:00</view>
+  </view>
+
+  <view class="foot">旧衣回收 · 绿色循环 · 公益同行</view>
+</view>

@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/booking/booking",
+    "pages/orders/orders",
+    "pages/profile/profile",
+    "pages/success/success",
+    "pages/order-detail/order-detail",
+    "pages/address/address",
+    "pages/address-edit/address-edit",
+    "pages/points/points",
+    "pages/nearby/nearby",
+    "pages/about/about"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#00b578",
+    "navigationBarTitleText": "旧衣回收",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f5f6f8",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#86909c",
+    "selectedColor": "#00b578",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tab-home.png",
+        "selectedIconPath": "images/tab-home-active.png"
+      },
+      {
+        "pagePath": "pages/booking/booking",
+        "text": "预约回收",
+        "iconPath": "images/tab-booking.png",
+        "selectedIconPath": "images/tab-booking-active.png"
+      },
+      {
+        "pagePath": "pages/orders/orders",
+        "text": "我的预约",
+        "iconPath": "images/tab-orders.png",
+        "selectedIconPath": "images/tab-orders-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "images/tab-profile.png",
+        "selectedIconPath": "images/tab-profile-active.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "用于查找附近的回收网点"
+    }
+  },
+  "requiredPrivateInfos": [
+    "getLocation"
+  ]
+}

@@ -1,0 +1,74 @@
+<view class="page">
+  <!-- 地址 -->
+  <view class="card addr" bindtap="pickAddress">
+    <view wx:if="{{address}}" class="row-space">
+      <view class="flex-1">
+        <view class="addr-line1">
+          <text class="addr-name">{{address.name}}</text>
+          <text class="addr-phone">{{address.phone}}</text>
+        </view>
+        <view class="addr-full">{{address.full}}</view>
+      </view>
+      <view class="addr-change">更换 ›</view>
+    </view>
+    <view wx:else class="addr-empty">📍 点击填写上门取件地址</view>
+  </view>
+
+  <!-- 回收物品 -->
+  <view class="card">
+    <view class="card-title">回收物品 <text class="title-tip">（可多选）</text></view>
+    <view class="chips">
+      <view class="chip {{item.checked ? 'active' : ''}}" wx:for="{{categories}}" wx:key="id"
+        data-index="{{index}}" bindtap="toggleCat">{{item.icon}} {{item.name}}</view>
+    </view>
+  </view>
+
+  <!-- 预估重量 -->
+  <view class="card">
+    <view class="card-title">预估重量</view>
+    <view class="chips">
+      <view class="chip {{weightIndex === index ? 'active' : ''}}" wx:for="{{weights}}" wx:key="*this"
+        data-index="{{index}}" bindtap="pickWeight">{{item}}</view>
+    </view>
+    <view class="weight-tip">上门实际称重为准，积分按实际重量计算</view>
+  </view>
+
+  <!-- 上门时间 -->
+  <view class="card">
+    <view class="card-title">上门时间</view>
+    <scroll-view scroll-x class="date-scroll" enhanced show-scrollbar="{{false}}">
+      <view class="date-item {{dateIndex === index ? 'active' : ''}}" wx:for="{{dates}}" wx:key="value"
+        data-index="{{index}}" bindtap="pickDate">
+        <view class="d-label">{{item.label}}</view>
+        <view class="d-week">{{item.week}}</view>
+      </view>
+    </scroll-view>
+    <view class="chips slots">
+      <view class="chip {{slotIndex === index ? 'active' : ''}}" wx:for="{{slots}}" wx:key="*this"
+        data-index="{{index}}" bindtap="pickSlot">{{item}}</view>
+    </view>
+  </view>
+
+  <!-- 备注 -->
+  <view class="card">
+    <view class="card-title">备注 <text class="title-tip">（选填）</text></view>
+    <textarea class="remark" placeholder="如：衣服已打包好、小区门禁要求等" placeholder-class="ph"
+      value="{{remark}}" bindinput="onRemark" maxlength="100"></textarea>
+  </view>
+
+  <!-- 回收说明 -->
+  <view class="rules">
+    <view class="rule-t">回收说明</view>
+    <view class="rule">· 满 5 公斤免费上门，不满 5 公斤建议攒够再约</view>
+    <view class="rule">· 1 公斤 = 5 积分，回收完成后自动发放</view>
+    <view class="rule">· 潮湿发霉、油污严重的衣物，泡水缺页的书籍暂不回收</view>
+  </view>
+
+  <view class="foot-space"></view>
+
+  <!-- 底部提交 -->
+  <view class="bottom-bar">
+    <view class="bar-points" wx:if="{{estimatePoints > 0}}">预计得 <text class="num">{{estimatePoints}}</text> 积分</view>
+    <view class="btn-primary flex-1" bindtap="submit">提交预约</view>
+  </view>
+</view>

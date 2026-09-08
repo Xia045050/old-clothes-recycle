@@ -1,0 +1,159 @@
+/* 状态横幅 */
+.status-hero {
+  padding: 44rpx 40rpx;
+  color: #fff;
+}
+.status-hero.h-pending {
+  background: linear-gradient(120deg, #ffb84a, #ff8f1f);
+}
+.status-hero.h-done {
+  background: linear-gradient(120deg, #00c983, #00b578);
+}
+.status-hero.h-cancel {
+  background: linear-gradient(120deg, #a9b0b8, #86909c);
+}
+.s-big {
+  font-size: 40rpx;
+  font-weight: 700;
+}
+.s-small {
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  opacity: 0.92;
+}
+
+/* 时间线 */
+.tl-item {
+  display: flex;
+}
+.tl-rail {
+  width: 44rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tl-dot {
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  background: #e5e6eb;
+  color: #fff;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 36rpx;
+  flex-shrink: 0;
+}
+.tl-dot.done {
+  background: #00b578;
+}
+.tl-dot.current {
+  background: #e8fff4;
+  border: 6rpx solid #00b578;
+  box-sizing: border-box;
+  animation: breathe 1.6s ease-in-out infinite;
+}
+@keyframes breathe {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(0, 181, 120, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 10rpx rgba(0, 181, 120, 0);
+  }
+}
+.tl-dot.cancel {
+  background: #f53f3f;
+}
+.tl-line {
+  width: 4rpx;
+  flex: 1;
+  background: #e5e6eb;
+  margin: 4rpx 0;
+}
+.tl-line.done {
+  background: #00b578;
+}
+.tl-line.cancel {
+  background: #f53f3f;
+}
+.tl-body {
+  flex: 1;
+  padding: 0 0 36rpx 20rpx;
+}
+.tl-item:last-child .tl-body {
+  padding-bottom: 8rpx;
+}
+.tl-name {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #86909c;
+}
+.tl-name.done {
+  color: #1d2129;
+}
+.tl-name.current {
+  color: #00b578;
+}
+.tl-name.cancel {
+  color: #f53f3f;
+}
+.tl-desc {
+  margin-top: 6rpx;
+  font-size: 22rpx;
+  color: #86909c;
+}
+
+/* 信息行 */
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12rpx 0;
+}
+.i-label {
+  font-size: 26rpx;
+  color: #86909c;
+  flex-shrink: 0;
+}
+.i-val {
+  font-size: 26rpx;
+  margin-left: 40rpx;
+  text-align: right;
+  word-break: break-all;
+}
+
+/* 底部按钮 */
+.foot-space {
+  height: 160rpx;
+}
+.bottom-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  padding: 20rpx 32rpx calc(20rpx + env(safe-area-inset-bottom));
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 -4rpx 20rpx rgba(29, 33, 41, 0.06);
+  z-index: 10;
+}
+.act {
+  flex: 1;
+  height: 88rpx;
+  line-height: 84rpx;
+  text-align: center;
+  border-radius: 44rpx;
+  font-size: 30rpx;
+  box-sizing: border-box;
+}
+.act + .act {
+  margin-left: 24rpx;
+}
+.btn-plain.act {
+  border: 2rpx solid #e5e6eb;
+  color: #4e5969;
+  background: #fff;
+}
+.btn-danger {
+  background: #fff;
+  border: 2rpx solid #f53f3f;
+  color: #f53f3f;
+}

@@ -1,0 +1,84 @@
+.page {
+  padding: 0 32rpx;
+}
+.result {
+  text-align: center;
+  padding: 90rpx 0 50rpx;
+}
+.check {
+  width: 140rpx;
+  height: 140rpx;
+  line-height: 140rpx;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00c983, #00b578);
+  color: #fff;
+  font-size: 80rpx;
+  font-weight: 700;
+  box-shadow: 0 12rpx 32rpx rgba(0, 181, 120, 0.35);
+  animation: pop 0.5s ease-out;
+}
+@keyframes pop {
+  0% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.12);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.r-title {
+  margin-top: 36rpx;
+  font-size: 40rpx;
+  font-weight: 700;
+}
+.r-sub {
+  margin-top: 14rpx;
+  font-size: 26rpx;
+  color: #86909c;
+}
+
+.o-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 14rpx 0;
+}
+.o-label {
+  font-size: 26rpx;
+  color: #86909c;
+  flex-shrink: 0;
+}
+.o-val {
+  font-size: 26rpx;
+  margin-left: 40rpx;
+  text-align: right;
+  word-break: break-all;
+}
+.o-val.point {
+  color: #ff7d00;
+  font-weight: 600;
+}
+
+.btns {
+  display: flex;
+  margin-top: 56rpx;
+}
+.btns .btn-plain {
+  flex: 1;
+  height: 92rpx;
+  line-height: 88rpx;
+  border: 2rpx solid #e5e6eb;
+  border-radius: 46rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #4e5969;
+  background: #fff;
+  margin-right: 24rpx;
+}
+.btns .btn-primary {
+  flex: 1.4;
+}

@@ -1,0 +1,20 @@
+{
+  "compileType": "miniprogram",
+  "libVersion": "3.3.4",
+  "appid": "wxc7a5e24ba0654b1f",
+  "projectname": "old-clothes-recycle",
+  "setting": {
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "urlCheck": false,
+    "coverView": true,
+    "ignoreUploadUnusedFiles": true
+  },
+  "condition": {},
+  "editorSetting": {
+    "tabIndent": "insertSpaces",
+    "tabSize": 2
+  }
+}

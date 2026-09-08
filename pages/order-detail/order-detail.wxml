@@ -1,0 +1,73 @@
+<view class="page" wx:if="{{order}}">
+  <!-- 状态横幅 -->
+  <view class="status-hero {{order.status === '待上门' ? 'h-pending' : (order.status === '已完成' ? 'h-done' : 'h-cancel')}}">
+    <view class="s-big">{{order.status === '待上门' ? '等待上门取件' : (order.status === '已完成' ? '回收完成' : '预约已取消')}}</view>
+    <view class="s-small" wx:if="{{order.status === '待上门'}}">{{order.dateLabel || order.date}} {{order.slot}} 回收员将准时上门</view>
+    <view class="s-small" wx:if="{{order.status === '已完成'}}">本次回收减碳约 {{co2Text}} kg，感谢您对环保的支持 🌱</view>
+    <view class="s-small" wx:if="{{order.status === '已取消'}}">如有需要，欢迎重新预约上门回收</view>
+  </view>
+
+  <!-- 进度 -->
+  <view class="card">
+    <view class="card-title">预约进度</view>
+    <view class="tl">
+      <view class="tl-item" wx:for="{{steps}}" wx:key="key">
+        <view class="tl-rail">
+          <view class="tl-dot {{item.state}}">{{item.state === 'done' ? '✓' : (item.state === 'cancel' ? '✕' : '')}}</view>
+          <view class="tl-line {{index < steps.length - 1 ? (steps[index + 1].state === 'cancel' ? 'cancel' : (steps[index + 1].state !== 'todo' ? 'done' : '')) : ''}}"
+            wx:if="{{index < steps.length - 1}}"></view>
+        </view>
+        <view class="tl-body">
+          <view class="tl-name {{item.state}}">{{item.name}}</view>
+          <view class="tl-desc">{{item.desc}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 预约信息 -->
+  <view class="card">
+    <view class="card-title">预约信息</view>
+    <view class="info-row">
+      <text class="i-label">预约单号</text>
+      <text class="i-val">{{order.id}}</text>
+    </view>
+    <view class="info-row">
+      <text class="i-label">回收物品</text>
+      <text class="i-val">{{order.cats}}</text>
+    </view>
+    <view class="info-row">
+      <text class="i-label">预估重量</text>
+      <text class="i-val">{{order.weightKg}} 公斤</text>
+    </view>
+    <view class="info-row">
+      <text class="i-label">上门时间</text>
+      <text class="i-val">{{order.dateLabel || order.date}} {{order.slot}}</text>
+    </view>
+    <view class="info-row">
+      <text class="i-label">取件地址</text>
+      <text class="i-val">{{order.address.full}}</text>
+    </view>
+    <view class="info-row">
+      <text class="i-label">联系人</text>
+      <text class="i-val">{{order.address.name}} {{order.address.phone}}</text>
+    </view>
+    <view class="info-row" wx:if="{{order.remark}}">
+      <text class="i-label">备注</text>
+      <text class="i-val">{{order.remark}}</text>
+    </view>
+    <view class="divider"></view>
+    <view class="row-space">
+      <text class="i-label">下单时间</text>
+      <text class="i-val">{{order.createdAt}}</text>
+    </view>
+  </view>
+
+  <view class="foot-space"></view>
+
+  <!-- 操作按钮 -->
+  <view class="bottom-bar">
+    <view class="btn-plain act" bindtap="callService">联系客服</view>
+    <view class="btn-danger act" wx:if="{{order.status === '待上门'}}" bindtap="cancel">取消预约</view>
+  </view>
+</view>

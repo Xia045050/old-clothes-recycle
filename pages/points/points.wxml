@@ -1,0 +1,60 @@
+<view class="page">
+  <!-- 积分余额 -->
+  <view class="p-hero">
+    <view class="p-label">我的环保积分</view>
+    <view class="p-num">{{pointsText}}</view>
+    <view class="p-tip">1 公斤旧衣 = 5 积分 · 回收完成自动发放</view>
+    <view class="p-recycle">累计回收 <text class="hl">{{stats.recycledKg}}</text> 公斤</view>
+    <view class="hero-circle c1"></view>
+    <view class="hero-circle c2"></view>
+  </view>
+
+  <!-- 环保贡献 -->
+  <view class="card">
+    <view class="card-title">我的环保贡献</view>
+    <view class="eco-row">
+      <view class="eco">
+        <view class="e-num">{{stats.co2}}<text class="e-unit">kg</text></view>
+        <view class="e-lbl">减少碳排放</view>
+      </view>
+      <view class="eco">
+        <view class="e-num">{{stats.water}}<text class="e-unit">L</text></view>
+        <view class="e-lbl">节约用水</view>
+      </view>
+      <view class="eco">
+        <view class="e-num">{{stats.trees}}<text class="e-unit">棵</text></view>
+        <view class="e-lbl">相当于植树</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 积分兑换 -->
+  <view class="card">
+    <view class="card-title">积分兑换</view>
+    <view class="gift-grid">
+      <view class="gift" wx:for="{{gifts}}" wx:key="id" data-index="{{index}}" bindtap="exchange">
+        <view class="g-ico">{{item.icon}}</view>
+        <view class="g-name">{{item.name}}</view>
+        <view class="g-points">{{item.points}} 积分</view>
+        <view class="g-btn">兑换</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 积分明细 -->
+  <view class="card">
+    <view class="card-title">积分明细</view>
+    <view class="rec" wx:for="{{records}}" wx:key="index">
+      <view class="r-title">{{item.title}}</view>
+      <view class="r-date">{{item.date}}</view>
+      <view class="r-delta">{{item.delta}}</view>
+    </view>
+  </view>
+
+  <view class="rules">
+    <view class="rule-t">积分规则</view>
+    <view class="rule">· 积分在回收员确认回收完成后 24 小时内发放</view>
+    <view class="rule">· 积分可用于兑换礼品，兑换后不可退回</view>
+    <view class="rule">· 如有疑问请联系客服 400-800-1234</view>
+  </view>
+</view>

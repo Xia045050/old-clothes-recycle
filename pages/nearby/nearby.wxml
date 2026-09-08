@@ -1,0 +1,20 @@
+<view class="page">
+  <map class="map" latitude="{{latitude}}" longitude="{{longitude}}"
+    markers="{{markers}}" scale="13" show-location></map>
+
+  <view class="tip">以下为演示网点数据，点击「导航」可打开地图前往</view>
+
+  <view class="card n-card" wx:for="{{points}}" wx:key="id">
+    <view class="row-space">
+      <view class="n-name">{{item.name}}</view>
+      <view class="n-dist">{{item.dist}}</view>
+    </view>
+    <view class="n-addr">📍 {{item.addr}}</view>
+    <view class="n-time">🕘 营业时间：{{item.time}}</view>
+    <view class="divider"></view>
+    <view class="row-space">
+      <view class="n-btn call" data-index="{{index}}" catchtap="call">电话咨询</view>
+      <view class="n-btn go" data-index="{{index}}" bindtap="navigate">导航前往 ›</view>
+    </view>
+  </view>
+</view>
